@@ -7,7 +7,6 @@ import {
   fittingSteps,
   heroBenefits,
   proofPoints,
-  services,
   blogPosts,
 } from "@/data/site";
 import { QrBlock } from "@/components/QrBlock";
@@ -217,33 +216,6 @@ export default function Home() {
           <Link className="button ghost" href="/about">
             О подходе BADLEN
           </Link>
-        </div>
-      </section>
-
-      {/* ── SERVICES GRID ──────────────────────────────────── */}
-      <section className="section">
-        <div className="section-heading">
-          <p className="eyebrow">Разделы</p>
-          <h2>Куда перейти</h2>
-          <p className="caption">Платье, ателье, корсет или запись — страница ведёт дальше.</p>
-        </div>
-        <div className="service-grid">
-          {services.map((service) => (
-            <Link className="service-tile" href={service.href} key={service.title}>
-              <Image
-                src={service.image}
-                alt={service.title}
-                width={960}
-                height={1200}
-                sizes="(max-width: 720px) 100vw, (max-width: 1080px) 50vw, 25vw"
-              />
-              <div>
-                <p>{service.kicker}</p>
-                <h3>{service.title}</h3>
-                <span>{service.text}</span>
-              </div>
-            </Link>
-          ))}
         </div>
       </section>
 

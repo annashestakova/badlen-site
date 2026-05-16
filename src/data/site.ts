@@ -93,7 +93,7 @@ export const weddingSilhouettes = [
   {
     title: "Русалка",
     note: "По фигуре с акцентом на талии, бедрах и линии спины.",
-    image: "/dresses/silhouettes/sketch-mermaid.jpg",
+    image: "/dresses/silhouettes/sketch-mermaid.png",
   },
   {
     title: "Прямое",
@@ -103,7 +103,7 @@ export const weddingSilhouettes = [
   {
     title: "Ампир",
     note: "Завышенная талия, свободная юбка — воздушно и нежно.",
-    image: "/dresses/silhouettes/sketch-empire.jpg",
+    image: "/dresses/silhouettes/sketch-empire.png",
   },
   {
     title: "Короткое",

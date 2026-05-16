@@ -18,42 +18,42 @@ const measurementSteps = [
     id: "bust",
     label: "Обхват груди",
     desc: "Лента проходит по самым выступающим точкам груди, параллельно полу. Не затягивайте, держите ровно.",
-    image: "https://images.pexels.com/photos/5710083/pexels-photo-5710083.jpeg?auto=compress&cs=tinysrgb&w=960",
+    image: "https://images.pexels.com/photos/4614227/pexels-photo-4614227.jpeg?auto=compress&cs=tinysrgb&w=960",
     note: "Снимайте в лёгком белье, не в корсете.",
   },
   {
     id: "underbust",
     label: "Под грудью",
     desc: "Лента проходит точно под нижней линией груди — это корсетная линия. Выдохните и слегка втяните живот.",
-    image: "https://images.pexels.com/photos/3738388/pexels-photo-3738388.jpeg?auto=compress&cs=tinysrgb&w=960",
+    image: "https://images.pexels.com/photos/4614232/pexels-photo-4614232.jpeg?auto=compress&cs=tinysrgb&w=960",
     note: "Именно эта мерка определяет посадку корсета.",
   },
   {
     id: "waist",
     label: "Обхват талии",
     desc: "Лента в самом узком месте торса — примерно на 2–3 пальца выше пупка. Не затягивайте и не выпячивайте.",
-    image: "https://images.pexels.com/photos/5710082/pexels-photo-5710082.jpeg?auto=compress&cs=tinysrgb&w=960",
+    image: "https://images.pexels.com/photos/4614234/pexels-photo-4614234.jpeg?auto=compress&cs=tinysrgb&w=960",
     note: "Стойте прямо, естественно.",
   },
   {
     id: "hips",
     label: "Обхват бёдер",
     desc: "Лента по наиболее широкой части бёдер, включая ягодицы. Стопы вместе.",
-    image: "https://images.pexels.com/photos/6626908/pexels-photo-6626908.jpeg?auto=compress&cs=tinysrgb&w=960",
+    image: "https://images.pexels.com/photos/4614239/pexels-photo-4614239.jpeg?auto=compress&cs=tinysrgb&w=960",
     note: "Обычно на 18–22 см ниже талии.",
   },
   {
     id: "back",
     label: "Длина по спине",
     desc: "От седьмого шейного позвонка (косточка на шее, которая выступает при наклоне головы) до талии.",
-    image: "https://images.pexels.com/photos/4614227/pexels-photo-4614227.jpeg?auto=compress&cs=tinysrgb&w=960",
+    image: "https://images.pexels.com/photos/6765942/pexels-photo-6765942.jpeg?auto=compress&cs=tinysrgb&w=960",
     note: "Попросите помощника, снять самому неудобно.",
   },
   {
     id: "shoulder-to-waist",
     label: "Плечо–талия",
     desc: "От точки плечевого шва (там, где обычно заканчивается ремень на плече) вертикально вниз до линии талии.",
-    image: "https://images.pexels.com/photos/6140460/pexels-photo-6140460.jpeg?auto=compress&cs=tinysrgb&w=960",
+    image: "https://images.pexels.com/photos/6765926/pexels-photo-6765926.jpeg?auto=compress&cs=tinysrgb&w=960",
     note: "Важна для построения корсетной чашки.",
   },
 ] as const;
@@ -118,8 +118,8 @@ export default function MeasurementsGuidePage() {
                 <Image
                   src={step.image}
                   alt={step.label}
-                  width={480}
-                  height={480}
+                  width={640}
+                  height={960}
                   sizes="(max-width: 720px) 100vw, 33vw"
                 />
                 <span className="measurement-step-num">

@@ -56,7 +56,6 @@ export function SiteFooter() {
         </div>
         <div>
           <p className="eyebrow">Внутри сайта</p>
-          <Link href="/story">История</Link>
           <Link href="/lookbook">Образы</Link>
           <Link href="/evening-dresses">Вечерние</Link>
           <Link href="/prices">Цены</Link>

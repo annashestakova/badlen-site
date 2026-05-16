@@ -6,7 +6,6 @@ export const navigation = [
   { href: "/atelier", label: "Ателье" },
   { href: "/corsets", label: "Корсеты" },
   { href: "/about", label: "О салоне" },
-  { href: "/story", label: "История" },
   { href: "/blog", label: "Блог" },
   { href: "/contacts", label: "Запись" },
 ] as const;

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="#f4f5f0"/>
+  <!-- Branch -->
+  <path d="M8 32 Q32 32 56 32" stroke="#b5828c" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+  <path d="M18 32 Q16 26 14 24" stroke="#b5828c" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M26 32 Q24 25 22 22" stroke="#b5828c" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M38 32 Q40 25 42 22" stroke="#b5828c" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M46 32 Q48 26 50 24" stroke="#b5828c" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <circle cx="32" cy="32" r="2.5" fill="#b5828c"/>
+  <circle cx="32" cy="32" r="4.5" stroke="#b5828c" stroke-width="0.8" fill="none"/>
+  <!-- B letter hint -->
+  <text x="32" y="52" font-family="Georgia, serif" font-size="13" font-weight="500"
+    fill="#20201d" text-anchor="middle" letter-spacing="2">B</text>
+</svg>

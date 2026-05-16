@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   return routes.map((route) => ({
-    url: `https://badlen-site.vercel.app${route}`,
+    url: `https://badelen.by${route}`,
     lastModified: now,
     changeFrequency: route === "" ? "weekly" : "monthly",
     priority: route === "" ? 1 : 0.7,

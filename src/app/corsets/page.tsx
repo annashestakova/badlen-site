@@ -37,11 +37,12 @@ export default function CorsetsPage() {
           </div>
         </div>
         <Image
-          src="/corsets/corset-22.jpeg"
-          alt="Корсет BADLEN"
+          src="/corsets/corset-39.jpeg"
+          alt="Корсет BADLEN — кружевной bustier"
           width={1200}
           height={1600}
           sizes="(max-width: 1080px) 100vw, 38vw"
+          priority
         />
       </section>
 
@@ -49,6 +50,11 @@ export default function CorsetsPage() {
         <div className="section-heading">
           <p className="eyebrow">Подборки</p>
           <h2>Корсеты по настроению</h2>
+          <p className="caption">
+            <Link href="/lookbook" style={{ textDecoration: "underline", opacity: 0.6 }}>
+              Смотреть все образы →
+            </Link>
+          </p>
         </div>
         <div className="look-grid">
           {corsetLooks.map((look) => (
@@ -75,7 +81,7 @@ export default function CorsetsPage() {
             },
             {
               title: "Снятие мерок",
-              desc: "Скачиваете гайд по меркам — там подробные фото и инструкция. Снимаете 6 основных мерок самостоятельно и отправляете нам.",
+              desc: "Открываете гайд по меркам на сайте — там подробные фото и инструкция. Снимаете 6 основных мерок самостоятельно и отправляете нам.",
             },
             {
               title: "Согласование",
@@ -83,11 +89,11 @@ export default function CorsetsPage() {
             },
             {
               title: "Предоплата",
-              desc: "Вносите предоплату 50% для запуска заказа. Остаток — при получении изделия.",
+              desc: "Вносите 100% предоплату для запуска заказа.",
             },
             {
               title: "Пошив",
-              desc: "Шьём корсет по вашим меркам. Срок — от 2 до 4 недель в зависимости от сложности и загрузки. Держим в курсе по ходу работы.",
+              desc: "Шьём корсет по вашим меркам. Срок — до 7 дней. Держим в курсе по ходу работы.",
             },
             {
               title: "Доставка",

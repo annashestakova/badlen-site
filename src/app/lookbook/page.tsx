@@ -36,8 +36,8 @@ export default function LookbookPage() {
           </div>
         </div>
         <Image
-          src="/corsets/corset-29.jpeg"
-          alt="BADLEN Lookbook — образы с корсетами"
+          src="/corsets/corset-6.jpeg"
+          alt="BADLEN Lookbook — флоральный корсет off-shoulder"
           width={1200}
           height={1600}
           sizes="(max-width: 1080px) 100vw, 38vw"

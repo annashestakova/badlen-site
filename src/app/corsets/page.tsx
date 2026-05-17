@@ -37,8 +37,8 @@ export default function CorsetsPage() {
           </div>
         </div>
         <Image
-          src="/corsets/corset-39.jpeg"
-          alt="Корсет BADLEN — кружевной bustier"
+          src="/corsets/corset-22.jpeg"
+          alt="Корсет BADLEN — корал с бантами и цветами"
           width={1200}
           height={1600}
           sizes="(max-width: 1080px) 100vw, 38vw"

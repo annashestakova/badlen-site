@@ -10,9 +10,7 @@ import {
   blogPosts,
 } from "@/data/site";
 import { QrBlock } from "@/components/QrBlock";
-import { JourneyGirlScene } from "@/components/JourneyGirlScene";
 import { SilhouetteShowcase } from "@/components/SilhouetteShowcase";
-import { FittingAnimation } from "@/components/FittingAnimation";
 import { BookingWidget } from "@/components/BookingWidget";
 import { ReviewsStrip } from "@/components/ReviewsStrip";
 
@@ -119,9 +117,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── JOURNEY WITH WALKING GIRL ──────────────────────── */}
-      <JourneyGirlScene />
-
       {/* ── BENEFITS STRIP ─────────────────────────────────── */}
       <section className="section compact">
         <div className="banner-strip">
@@ -201,24 +196,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── FITTING ANIMATION ──────────────────────────────── */}
-      <section className="section compact fitting-anim-section">
-        <div className="fitting-anim-wrap" aria-hidden="true">
-          <FittingAnimation />
-        </div>
-        <div className="fitting-anim-copy">
-          <p className="eyebrow">BADLEN · Брест</p>
-          <h2>Каждое платье — только для вас</h2>
-          <p>
-            Мы шьём индивидуально. Примерка, снятие мерок и финальная посадка —
-            часть процесса, а не доп. услуга. Никаких шаблонов.
-          </p>
-          <Link className="button ghost" href="/about">
-            О подходе BADLEN
-          </Link>
-        </div>
-      </section>
-
       {/* ── BOOKING ────────────────────────────────────────── */}
       <section className="section muted" id="booking">
         <div className="section-heading">
@@ -232,15 +209,15 @@ export default function Home() {
         <BookingWidget />
       </section>
 
-      {/* ── REVIEWS ────────────────────────────────────────── */}
-      <section className="section reviews-section">
+      {/* ── REVIEWS (temporarily hidden) ──────────────────── */}
+      {/* <section className="section reviews-section">
         <div className="section-heading">
           <p className="eyebrow">Отзывы</p>
           <h2>Говорят невесты</h2>
           <p className="caption">Скриншоты реальных переписок и отзывов наших клиенток.</p>
         </div>
         <ReviewsStrip />
-      </section>
+      </section> */}
 
       {/* ── BLOG PREVIEW ───────────────────────────────────── */}
       <section className="section">

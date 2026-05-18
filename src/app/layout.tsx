@@ -17,7 +17,7 @@ const serif = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://badlen-site.vercel.app"),
+  metadataBase: new URL("https://www.badelen.by"),
   title: {
     default: "BADLEN · свадебный салон и ателье в Бресте",
     template: "%s · BADLEN",
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
   description:
     "BADLEN в Бресте: свадебные и вечерние платья, пошив на заказ, ателье, подгонка по фигуре и корсеты на заказ по Беларуси.",
   alternates: {
-    canonical: "/",
+    canonical: "https://www.badelen.by",
   },
   openGraph: {
     title: "BADLEN · свадебный салон и ателье в Бресте",
     description:
       "Свадебные и вечерние платья в Бресте, пошив на заказ, ателье и корсеты на заказ по Беларуси.",
-    url: "https://badlen-site.vercel.app",
+    url: "https://www.badelen.by",
     siteName: "BADLEN",
     locale: "ru_BY",
     type: "website",

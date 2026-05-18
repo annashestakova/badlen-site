@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/studio",
       },
     ],
-    sitemap: "https://badelen.by/sitemap.xml",
+    sitemap: "https://www.badelen.by/sitemap.xml",
   };
 }

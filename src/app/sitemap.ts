@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   return routes.map((route) => ({
-    url: `https://badelen.by${route}`,
+    url: `https://www.badelen.by${route}`,
     lastModified: now,
     changeFrequency: route === "" ? "weekly" : "monthly",
     priority: route === "" ? 1 : 0.7,

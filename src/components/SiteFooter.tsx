@@ -63,7 +63,28 @@ export function SiteFooter() {
           <Link href="/measurements-guide">Мерки</Link>
         </div>
       </div>
-      {/* "Перед свадьбой" checklist — hidden */}
+      {/* Legal bottom bar */}
+      <div style={{
+        marginTop: "2.5rem",
+        paddingTop: "1.25rem",
+        borderTop: "1px solid rgba(255,255,255,0.08)",
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "8px 20px",
+        alignItems: "center",
+        fontSize: "0.72rem",
+        color: "rgba(255,255,255,0.35)",
+        letterSpacing: "0.04em",
+      }}>
+        <span>© BADLEN, 2026</span>
+        <Link href="/privacy" style={{ color: "rgba(255,255,255,0.45)", textDecoration: "underline", textUnderlineOffset: 3 }}>
+          Политика конфиденциальности
+        </Link>
+        <Link href="/cookies" style={{ color: "rgba(255,255,255,0.45)", textDecoration: "underline", textUnderlineOffset: 3 }}>
+          Политика куки
+        </Link>
+        <span>Закон РБ от 07.05.2021 № 99-З</span>
+      </div>
     </footer>
   );
 }

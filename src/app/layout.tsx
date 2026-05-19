@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { CookieConsent } from "@/components/CookieConsent";
 import "./globals.css";
 
 const sans = Manrope({
@@ -57,6 +58,7 @@ export default function RootLayout({
         <SiteHeader />
         {children}
         <SiteFooter />
+        <CookieConsent />
       </body>
     </html>
   );

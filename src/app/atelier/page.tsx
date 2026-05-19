@@ -46,7 +46,7 @@ export default function AtelierPage() {
           </div>
         </div>
         <Image
-          src="/corsets/corset-16.jpeg"
+          src="/corsets/corset-24.jpeg"
           alt="Ателье BADLEN"
           width={1200}
           height={1600}

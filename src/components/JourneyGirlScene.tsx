@@ -27,7 +27,7 @@ const journeySteps = [
 const journeyPhotos = [
   {
     cls: "jg-photo-one",
-    src: "https://images.pexels.com/photos/1488318/pexels-photo-1488318.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    src: "/corsets/corset-24.jpeg",
   },
   {
     cls: "jg-photo-two",

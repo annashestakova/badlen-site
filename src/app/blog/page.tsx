@@ -27,10 +27,20 @@ export default async function BlogPage() {
   };
   let posts: PostItem[] = [];
 
+  // Все статические статьи — всегда показываем
+  const staticMapped: PostItem[] = staticPosts.map((p) => ({
+    slug: p.slug,
+    tag: p.tag,
+    title: p.title,
+    excerpt: p.excerpt,
+    staticCoverImage: "coverImage" in p ? (p as typeof p & { coverImage?: string }).coverImage : undefined,
+    fromSanity: false,
+  }));
+
   try {
     const sanityPosts = await getAllBlogPosts();
     if (sanityPosts.length > 0) {
-      posts = sanityPosts.map((p) => ({
+      const sanityMapped: PostItem[] = sanityPosts.map((p) => ({
         slug: p.slug.current,
         tag: p.tag,
         title: p.title,
@@ -38,20 +48,16 @@ export default async function BlogPage() {
         coverImage: p.coverImage,
         fromSanity: true,
       }));
+      // Sanity-статьи первыми, статические добавляем только те, которых нет в Sanity
+      const sanitySlugs = new Set(sanityMapped.map((p) => p.slug));
+      posts = [...sanityMapped, ...staticMapped.filter((p) => !sanitySlugs.has(p.slug))];
     }
   } catch {
-    // Sanity недоступен — используем статику
+    // Sanity недоступен — используем только статику
   }
 
   if (posts.length === 0) {
-    posts = staticPosts.map((p) => ({
-      slug: p.slug,
-      tag: p.tag,
-      title: p.title,
-      excerpt: p.excerpt,
-      staticCoverImage: "coverImage" in p ? (p as typeof p & { coverImage?: string }).coverImage : undefined,
-      fromSanity: false,
-    }));
+    posts = staticMapped;
   }
 
   return (

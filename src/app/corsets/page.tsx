@@ -68,6 +68,31 @@ export default function CorsetsPage() {
         </div>
       </section>
 
+      {/* ── Product shots ── */}
+      <section className="section corset-shoot">
+        <div className="section-heading">
+          <p className="eyebrow">Предметная съёмка</p>
+          <h2>Новые модели</h2>
+          <p>Детали, ткань, конструкция — вблизи.</p>
+        </div>
+        <div className="corset-shoot-grid">
+          {[129, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143].map((n, i) => (
+            <div
+              key={n}
+              className={`corset-shoot-item${i === 0 ? " wide" : i === 3 ? " tall" : i === 7 ? " wide" : ""}`}
+            >
+              <Image
+                src={`/corsets/corset-${n}.jpeg`}
+                alt={`Корсет BADLEN — модель ${n}`}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="section muted">
         <div className="section-heading">
           <p className="eyebrow">Как это работает</p>

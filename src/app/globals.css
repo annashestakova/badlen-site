@@ -4590,3 +4590,415 @@ h1, h2, h3 {
     aspect-ratio: 4 / 5;
   }
 }
+
+/* ═══════════════════════════════════════════
+   FABRICS PAGE
+═══════════════════════════════════════════ */
+
+/* Hero */
+.fabrics-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background: #1a1208;
+  padding: 140px 48px 80px;
+}
+
+.fabrics-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(196,168,130,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 80% at 20% 60%, rgba(139,90,66,0.10) 0%, transparent 50%);
+  animation: fabrics-bg-breathe 8s ease-in-out infinite;
+}
+
+@keyframes fabrics-bg-breathe {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.7; transform: scale(1.04); }
+}
+
+.fabrics-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+
+.fabrics-hero-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  line-height: 1.05;
+  color: #f5efe8;
+  margin: 12px 0 20px;
+  letter-spacing: -0.01em;
+}
+
+.fabrics-hero-sub {
+  font-size: 1rem;
+  color: rgba(245,239,232,0.65);
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+/* Ticker */
+.fabrics-ticker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  padding: 14px 0;
+  border-top: 1px solid rgba(196,168,130,0.15);
+  background: rgba(0,0,0,0.25);
+}
+
+.fabrics-ticker-track {
+  display: flex;
+  gap: 32px;
+  white-space: nowrap;
+  animation: fabrics-ticker-scroll 22s linear infinite;
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: rgba(196,168,130,0.6);
+  text-transform: uppercase;
+}
+
+@keyframes fabrics-ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Category banners */
+.fabric-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+}
+
+.fabric-banner-right {
+  direction: rtl;
+}
+.fabric-banner-right > * {
+  direction: ltr;
+}
+
+.fabric-banner-photo {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.fabric-banner-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20,14,10,0.15);
+  transition: background 0.5s ease;
+}
+
+.fabric-banner:hover .fabric-banner-photo::after {
+  background: rgba(20,14,10,0.05);
+}
+
+.fabric-banner-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.fabric-banner-num {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 2;
+  font-family: var(--font-serif);
+  font-size: 6rem;
+  line-height: 1;
+  color: rgba(255,255,255,0.08);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  pointer-events: none;
+}
+
+.fabric-banner-content {
+  padding: 64px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #faf8f5;
+}
+
+.fabric-banner-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: #1a1208;
+  margin: 8px 0 12px;
+  line-height: 1.1;
+}
+
+.fabric-banner-sub {
+  font-size: 0.9rem;
+  color: #7a6055;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.fabric-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 36px;
+}
+
+.fabric-item {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(120,80,60,0.10);
+}
+
+.fabric-item:first-child {
+  border-top: 1px solid rgba(120,80,60,0.10);
+}
+
+.fabric-item-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.fabric-item-name {
+  font-size: 0.95rem;
+  color: #2a1e18;
+  font-weight: 600;
+}
+
+.fabric-item-note {
+  font-size: 0.72rem;
+  color: #9a7a6a;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  flex: 1;
+}
+
+.fabric-item-price {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.fabric-item-desc {
+  font-size: 0.82rem;
+  color: #7a6055;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.fabric-cta-link {
+  display: inline-block;
+  padding: 11px 28px;
+  border: 1px solid;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.25s, color 0.25s;
+  align-self: flex-start;
+}
+
+.fabric-cta-link:hover {
+  background: currentColor;
+  color: #fff !important;
+}
+
+/* Price table */
+.fabrics-table {
+  max-width: 720px;
+  margin: 2rem auto 0;
+  border: 1px solid rgba(120,80,60,0.12);
+}
+
+.fabrics-table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(120,80,60,0.08);
+  align-items: center;
+}
+
+.fabrics-table-row:last-child {
+  border-bottom: none;
+}
+
+.fabrics-table-row:nth-child(odd) {
+  background: rgba(139,90,66,0.03);
+}
+
+.fabrics-table-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #2a1e18;
+}
+
+.fabrics-table-use {
+  font-size: 0.78rem;
+  color: #9a7a6a;
+  letter-spacing: 0.04em;
+}
+
+.fabrics-table-price {
+  font-size: 0.85rem;
+  color: #8b5a42;
+  font-weight: 500;
+  text-align: right;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .fabrics-hero {
+    padding: 120px 24px 100px;
+    min-height: auto;
+  }
+
+  .fabric-banner,
+  .fabric-banner-right {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .fabric-banner-photo {
+    aspect-ratio: 16 / 9;
+  }
+
+  .fabric-banner-content {
+    padding: 40px 24px;
+  }
+
+  .fabrics-table-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .fabrics-table-price {
+    grid-column: 1 / -1;
+    text-align: left;
+    font-size: 0.8rem;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   ATELIER — fabric banners
+═══════════════════════════════════════════ */
+
+.atelier-fabrics {
+  padding: 80px 48px;
+  background: #1a1208;
+}
+
+.atelier-fabrics .section-heading h2,
+.atelier-fabrics .section-heading p,
+.atelier-fabrics .section-heading .eyebrow {
+  color: rgba(245,239,232,0.85);
+}
+
+.atelier-fabric-banners {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 0;
+}
+
+.atelier-fabric-card {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.atelier-fabric-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.7s ease;
+}
+
+.atelier-fabric-card:hover .atelier-fabric-card-bg {
+  transform: scale(1.05);
+}
+
+.atelier-fabric-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,7,4,0.80) 0%, rgba(10,7,4,0.25) 50%, transparent 100%);
+  transition: background 0.4s ease;
+}
+
+.atelier-fabric-card:hover .atelier-fabric-card-overlay {
+  background: linear-gradient(to top, rgba(10,7,4,0.70) 0%, rgba(10,7,4,0.15) 50%, transparent 100%);
+}
+
+.atelier-fabric-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 24px;
+}
+
+.atelier-fabric-card-list {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: rgba(245,239,232,0.90);
+  margin: 6px 0 12px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+.atelier-fabric-card-cta {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(6px);
+  display: block;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.atelier-fabric-card:hover .atelier-fabric-card-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .atelier-fabrics {
+    padding: 60px 20px;
+  }
+
+  .atelier-fabric-banners {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .atelier-fabric-card {
+    aspect-ratio: 16 / 9;
+  }
+
+  .atelier-fabric-card-cta {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

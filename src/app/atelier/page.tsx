@@ -89,6 +89,60 @@ export default function AtelierPage() {
         </div>
       </section>
 
+      {/* ── Fabric banners ── */}
+      <section className="atelier-fabrics">
+        <div className="section-heading" style={{ paddingBottom: "2rem" }}>
+          <p className="eyebrow">Материалы</p>
+          <h2>Ткани в работе</h2>
+          <p>Под каждое изделие подбирается ткань, которая держит форму и работает на фигуру.</p>
+        </div>
+
+        <div className="atelier-fabric-banners">
+          {[
+            {
+              label: "Свадебные платья",
+              fabrics: "Атлас · Кружево · Жаккард · Шифон",
+              photo: "https://images.pexels.com/photos/3361819/pexels-photo-3361819.jpeg?auto=compress&cs=tinysrgb&w=1200",
+              accent: "#c4a882",
+              href: "/wedding-dresses",
+            },
+            {
+              label: "Вечерние образы",
+              fabrics: "Бархат · Сетка · Пайетки · Атлас",
+              photo: "https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&w=1200",
+              accent: "#8b5a42",
+              href: "/evening-dresses",
+            },
+            {
+              label: "Корсеты",
+              fabrics: "Атлас · Хлопок · Бархат · Кружево",
+              photo: "https://images.pexels.com/photos/6765601/pexels-photo-6765601.jpeg?auto=compress&cs=tinysrgb&w=1200",
+              accent: "#3a2c24",
+              href: "/corsets",
+            },
+          ].map((b) => (
+            <Link key={b.label} href={b.href} className="atelier-fabric-card">
+              <div
+                className="atelier-fabric-card-bg"
+                style={{ backgroundImage: `url(${b.photo})` }}
+              />
+              <div className="atelier-fabric-card-overlay" />
+              <div className="atelier-fabric-card-body">
+                <p className="eyebrow" style={{ color: b.accent }}>{b.label}</p>
+                <p className="atelier-fabric-card-list">{b.fabrics}</p>
+                <span className="atelier-fabric-card-cta" style={{ color: b.accent }}>
+                  Смотреть →
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <div style={{ textAlign: "center", marginTop: "2rem" }}>
+          <Link href="/fabrics" className="button ghost">Все ткани и цены</Link>
+        </div>
+      </section>
+
       <section className="section">
         <div className="price-grid">
           {salonHighlights.map((item) => (

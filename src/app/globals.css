@@ -5003,6 +5003,55 @@ h1, h2, h3 {
   }
 }
 
+/* ── Fabric timeline (atelier page) ── */
+.fabric-timeline {
+  display: flex;
+  flex-direction: column;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.fabric-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1.5rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(120, 80, 60, 0.1);
+}
+.fabric-step:last-child {
+  border-bottom: none;
+}
+.fabric-step-num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(120, 80, 60, 0.2);
+  line-height: 1;
+  padding-top: 0.1rem;
+}
+.fabric-step-body h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.fabric-step-body p {
+  font-size: 0.83rem;
+  color: #7a6055;
+  line-height: 1.6;
+}
+.fabric-step-list {
+  margin-top: 0.5rem;
+  letter-spacing: 0.06em;
+  opacity: 0.7;
+}
+@media (max-width: 600px) {
+  .fabric-step {
+    grid-template-columns: 40px 1fr;
+    gap: 1rem;
+  }
+  .fabric-step-num {
+    font-size: 1.5rem;
+  }
+}
+
 /* ── Corset product shots ── */
 .corset-shoot-grid {
   display: grid;

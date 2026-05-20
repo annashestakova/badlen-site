@@ -76,14 +76,24 @@ export default function CorsetsPage() {
           <p>Детали, ткань, конструкция — вблизи.</p>
         </div>
         <div className="corset-shoot-grid">
-          {[129, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143].map((n, i) => (
+          {[
+            { n: 350, label: "Цветочный тёплый" },
+            { n: 351, label: "Лавандовый" },
+            { n: 352, label: "Фиолетовый" },
+            { n: 353, label: "Розовые розы" },
+            { n: 354, label: "Зелёный цветочный" },
+            { n: 355, label: "Розовые пионы" },
+            { n: 356, label: "Лавандово-оранжевый" },
+            { n: 357, label: "Персиковый с лавандой" },
+            { n: 358, label: "Голубой ромашковый" },
+          ].map(({ n, label }, i) => (
             <div
               key={n}
-              className={`corset-shoot-item${i === 0 ? " wide" : i === 3 ? " tall" : i === 7 ? " wide" : ""}`}
+              className={`corset-shoot-item${i === 0 ? " wide" : i === 4 ? " wide" : ""}`}
             >
               <Image
                 src={`/corsets/corset-${n}.jpeg`}
-                alt={`Корсет BADLEN — модель ${n}`}
+                alt={`Корсет BADLEN — ${label}`}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
